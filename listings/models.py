@@ -1,7 +1,7 @@
 from django.db import models
 from datetime import datetime
 
-from realtors.model import Realtor
+from realtors.models import Realtor
 
 
 # Create your models here.
