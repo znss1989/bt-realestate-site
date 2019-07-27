@@ -52,7 +52,10 @@ def login(request):
 
 
 def logout(request):
-    return redirect('index')
+    if request.method == 'POST':
+        auth.logout(request)
+        messages.success(request, 'Logged out')
+        return redirect('index')
 
 
 def dashboard(request):
